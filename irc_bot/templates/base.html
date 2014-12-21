@@ -1,0 +1,57 @@
+{% load i18n %}
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+
+
+<!-- menu -->
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <script src="{{STATIC_URL}}/jQuery-Form-Validator/form-validator/jquery.form-validator.min.js"></script>
+       <link rel="stylesheet" type="text/css" media="screen" href="{{STATIC_URL}}/css/style.css" />
+    <script type="text/javascript" src="{{STATIC_URL}}/js/jquery.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}/js/menu.js"></script>
+
+<link rel="stylesheet" href="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/themes/overcast/jquery.ui.all.css">
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/jquery-1.9.1.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.button.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.effect.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.effect-blind.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.effect-bounce.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.effect-clip.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.effect-drop.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.effect-fold.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.effect-slide.js"></script>
+	<script src="{{STATIC_URL}}/jquery-ui-1.10.3.custom/development-bundle/ui/jquery.ui.datepicker.js"></script>
+	<link rel="stylesheet" href="../demos.css">
+{% block title %}
+{% endblock %}
+<script>
+$(function() {
+$( "#id_date" ).datepicker({
+
+changeMonth: true,
+changeYear: true,dateFormat:'yy-mm-dd'
+});
+$( "#id_date" ).datepicker( "option", "showAnim", 'clip' );
+});
+
+  </script>
+</head>
+<body>
+{% block form %}
+{% endblock %}
+
+{% block content %}
+
+ {% endblock %}
+
+		<!-- END content -->
+
+
+
+</body>
+</html>

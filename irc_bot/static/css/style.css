@@ -1,0 +1,129 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+body {
+    font-family: Lato, Sans-serif;
+    background-color:#FAFAFA;
+}
+
+.getDate {
+		margin: 100px auto 100px auto;
+    width: 600px;
+		background-color:#FAFAFA;
+}
+
+.getDateForm{
+	vertical-align: middle;
+display: table-row;
+width: 300px;
+
+position: absolute;
+margin: -25px auto 145px 215px;
+}
+
+.getDate p{
+	text-align:center;
+	font-size: 1.5em;
+}
+
+.error{
+color: #F22613;
+}
+
+input#gobutton{
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+padding:0px 13px; /*add some padding to the inside of the button*/
+background:rgba(40, 177, 172, 1); /*the colour of the button*/
+border:1px solid #33842a; /*required or the default border for the browser will appear*/
+/*give the button curved corners, alter the size as required*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+/*give the button a drop shadow*/
+-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+box-shadow: 0 0 4px rgba(0,0,0, .75);
+/*style the text*/
+color:#f3f3f3;
+font-size:1.1em;
+position: absolute;
+margin: -25px auto 100px 41px;
+
+}
+/***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
+input#gobutton:hover, input#gobutton:focus{
+background-color:rgba(40, 177, 172, 1); /*make the background a little darker*/
+/*reduce the drop shadow size to give a pushed button effect*/
+-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+box-shadow: 0 0 1px rgba(0,0,0, .75);
+
+position: absolute;
+margin: -25px auto 100px 41px;
+
+}
+
+
+table {
+	width:100%;
+}
+
+table #name{
+	width: 130px;
+	color: #0E0F1D;
+	padding-right: 5px;
+	text-align:right;
+}
+
+table #time{
+	width: 80px;
+	text-align: center;
+	color: #2c3e50;
+}
+
+.image-place {
+position: relative;
+margin: 136px auto -68px auto;
+width: 350px;
+}
+
+.header{
+position: relative;
+font-size: 4em;
+margin: 61px auto -125px auto;
+width: 300px;
+font-family: 'Josefin Slab', serif;
+}
+
+table {
+border-collapse: collapse;
+}
+
+table #message-pubmsg {
+padding-left: 5px;
+}
+table #message-join {
+color: #2ecc71;
+padding-left: 5px;
+}
+table #message-quit {
+color: #e74c3c;
+padding-left: 5px;
+}
+table th{
+color: #34495e
+}
+
+.log-date {
+color:#34495e;
+font-size:1.7em;
+}
+
+table #message-action {
+padding-left: 5px;
+color: #95a5a6;
+}
+
+table #message-topic {
+padding-left: 5px;
+color: #95a5a6;
+}

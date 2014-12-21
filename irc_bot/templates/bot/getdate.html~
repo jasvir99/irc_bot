@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+<html>
+<head>
+<title>GD IRC</title>
+</head>
+{% block form %}
+<div class="header">
+<p><b>GD</b> IRC bot</p>
+</div>
+<div class="image-place">
+<img src="{{ LOCAL_URL }}/irc_static/images/robot.png" width="350" height="250">
+</div>
+<div class="getDate">
+<h3>Enter Date</h3>
+<form class="getDateForm" action="" method="post">
+	{% csrf_token %}
+        <table>
+            <tr><th><label for="id_date"></label></th><td><input id="id_date" name="date" type="text" /></td></tr>
+						{% if error %}
+						<span class="error">{{ error }}</span>
+						{% endif %}
+        </table>
+<br><br>
+       <input id="gobutton" type="submit" value="Submit" />
+    </form>
+</div>
+{% endblock %}
+</html>

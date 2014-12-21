@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+<html>
+<head>
+{% block title %}
+<title>GD IRC</title>
+{% endblock %}
+</head>
+{% block content %}
+<a href="{{LOCAL_URL}}/irc_bot">
+<img src="{{ LOCAL_URL }}/irc_static/images/Flaticon_340.png" width="40" height="30">
+</a>
+<div class="log-date">
+<p> Logs for {{ date }} </p>
+</div>
+<table border='1'>
+<tr>
+	<th>Time</th>
+	<th>Name</th>
+	<th>Message</th>
+</tr>
+{% if log %}
+{% for values in log %}
+<tr>
+{% if values.type != 'part' %}
+	<td id='time'>{{ values.time|time:"H:i" }}</td>
+	<td id='name'>{{ values.name }}</td>
+{% if values.type == 'pubmsg' %}
+	<td id='message-pubmsg'>{{ values.message }}</td>
+{% elif values.type == 'join' %}
+<td id='message-join'>{{ values.name }} got into IRC</td>
+{% elif values.type == 'quit' %}
+<td id='message-quit'>{{ values.message }}</td>
+{% elif values.type == 'action' %}
+<td id='message-action'>**{{ values.message }}
+{% endif %}
+	
+{% endif %}
+</tr>
+{% endfor %}
+{% endif %}
+</table>
+{% endblock %}
+</html>
